@@ -37,7 +37,7 @@ $seq = new \AutoHttp\Sequence(
 			null,
 			// A non-null request body will instruct AutoHttp to use POST instead of GET.
 			// Placeholders like {{this}} in the URL, body, or headers, will automatically
-            // be replaced with variables extracted by \AutoHttp\Rule objects.
+			// be replaced with variables extracted by \AutoHttp\Rule objects.
 			'username={{username}}&password={{password}}&token={{token}}',
 			array(
 				// Verify the response looks the way we expect.
@@ -130,6 +130,7 @@ Defines a single HTTP request.
 The following variables can be accessed after execution to examine information about the transaction:
 
 `public $response` : an associative array containing the following values:
+
 Key | Value
 ---|---
 headers | an associative array of response headers
@@ -152,6 +153,7 @@ Defines a string extraction rule that takes place after the page has been downlo
 #### `public function __construct(array $values)`
 
 `$values` : an associative array containing the following parameters:
+
 Key | Value
 ---|---
 name | the name of the variable to store the extracted result
@@ -176,7 +178,7 @@ A logger class that writes to the response stream.
 ## Testing & Contribution
 AutoHttp works fine inside command-line PHP projects, but in order to run the test library you will need a webserver that is configured to serve tests.php and the pages in the 'test/pages' directory. Execute the test cases by loading tests.php in a web browser and verifying that the result is '**All tests passed**'.
 
-Contributions are welcome and encouraged :). Just add a test case to cover your new functionality, and please ensure all tests are passing before submitting a PR. 
+Contributions are welcome and encouraged :smile:. Just add a test case to cover your new functionality, and please ensure all tests are passing before submitting a PR. 
 
 ## About
 Contact: paulvirag (paulvirag@live.com)
