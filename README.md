@@ -72,7 +72,7 @@ else
 
 ## Classes
 
-### AutoHttp
+### Class \AutoHttp\AutoHttp
 Primary interface class for the AutoHttp system.
 
 #### Methods
@@ -90,7 +90,7 @@ maxRedirects | the maximum number of redirects to follow before aborting a reque
 #### `public function execute(Sequence $seq)`
 Executes a sequence of HTTP transactions. Returns true if all requests succeed, all Validations pass, and all Rules successfully execute. Otherwise returns an error string.
 
-### Sequence
+### Class \AutoHttp\Sequence
 Defines an entire sequence of HTTP navigations. This is the data class that is handed to AutoHttp for execution.
 
 #### Methods
@@ -110,7 +110,7 @@ The following variables can be accessed after execution to examine information a
 `public $variables` : the final variable dictionary after execution
 
 
-### Page
+### Class \AutoHttp\Page
 Defines a single HTTP request.
 
 #### Methods
@@ -138,7 +138,7 @@ headersRaw | a non-associative array of response headers
 body | the response body
 error | an error string if one was encountered during the HTTP transaction
 
-### Validation
+### Class \AutoHttp\Validation
 Defines a piece of text to search for in the response body to ensure the page matches the one we're expecting. If a Validation fails, AutoHttp will halt further execution.
 
 #### Methods
@@ -146,7 +146,7 @@ Defines a piece of text to search for in the response body to ensure the page ma
 
 `$text` : the text to search for
 
-### Rule
+### Class \AutoHttp\Rule
 Defines a string extraction rule that takes place after the page has been downloaded. Extracts a piece of text from between two fixed strings in the response body and adds it to the variable array.
 
 #### Methods
@@ -161,7 +161,7 @@ start | (optional) a string in the response body to use as a starting point for 
 left | a string in the response body that occurs directly to the left of the desired value
 right | a string in the response body that occurs directly to the right of the desired value
 
-### FileLog
+### Class \AutoHttp\FileLog
 A logger class that writes to a directory on the server.
 
 #### Methods
@@ -169,7 +169,7 @@ A logger class that writes to a directory on the server.
 
 `$logDir` : the directory to write log files to
 
-### ResponseLog
+### Class \AutoHttp\ResponseLog
 A logger class that writes to the response stream.
 
 #### Methods
